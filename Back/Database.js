@@ -4,7 +4,7 @@ const dbOptions = {
   host: "127.0.0.1",
   port: 3050,
   database:
-    "C:\Users\ellia\OneDrive\Área de Trabalho\Cadastro\Back\Banco\ESTOQUE.FDB",
+    "C:\Users\ellia\OneDrive\Área de Trabalho\projetofabiano\Back\Banco\ESTOQUE.FDB",
   user: "SYSDBA",
   password: "masterkey",
   lowercase_keys: true,
