@@ -13,7 +13,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/produtos.css">
 </head>
 
 <body>
@@ -104,47 +103,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/produtos.js" type="module"></script>
-  <script src="Back\index.js"></script>
-
-  <script>
-    fetch('http://localhost:3000/produtos')
-      .then(response => response.json())
-      .then(data => {
-        // Get a reference to the table body
-        const tbody = document.querySelector('table tbody');
-
-        // Remove any existing rows in the table body
-        while (tbody.firstChild) {
-          tbody.firstChild.remove();
-        }
-
-        // Loop through the data and add a row for each item
-        data.forEach(item => {
-          const row = document.createElement('tr');
-
-          const codigoCell = document.createElement('td');
-          codigoCell.textContent = item.codigo;
-          row.appendChild(codigoCell);
-
-          const descricaoCell = document.createElement('td');
-          descricaoCell.textContent = item.descricao;
-          row.appendChild(descricaoCell);
-
-          const validadeCell = document.createElement('td');
-          validadeCell.textContent = item.dt_validade;
-          row.appendChild(validadeCell);
-
-          const actionsCell = document.createElement('td');
-          actionsCell.innerHTML = '<button class="btn btn-primary">Edit</button> <button class="btn btn-danger">Delete</button>';
-          row.appendChild(actionsCell);
-
-          tbody.appendChild(row);
-        });
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  </script>
-</body>
+  <script src="index.js"></script>
+ </body>
 
 </html>

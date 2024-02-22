@@ -5,7 +5,7 @@ function rowProd(pProduto){
         <tr>
             <td>${pProduto.id}</td>
             <td>${pProduto.descricao}</td>
-            <td>${pProduto.dt_vencimento}</td>
+            <td>${pProduto.dt_validade}</td>
             <td> 
             <button type="button" class="btn btn-primary btn-alterar" data-id=${pProduto.id} >Alterar</button> 
             <button type="button" class="btn btn-danger btn-excluir" data-id=${pProduto.id}>Excluir</button>
@@ -67,6 +67,8 @@ function associaEventos(){
     let btnsAlterar = document.querySelectorAll(".btn-alterar");
     btnsAlterar.forEach(btn => {
         btn.onclick = (e) => {
+
+            $("#frmCadastroProduto").modal("show");
 
             let id = e.target.dataset.id;
 

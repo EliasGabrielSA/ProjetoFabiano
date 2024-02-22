@@ -4,7 +4,7 @@ const dbOptions = {
   host: "localhost",
   port: 3050,
   database:
-    "C:\\Users\\batat\\OneDrive\\Documentos\\facul\\ProjetoFabiano\\Back\\Banco\\ESTOQUE.FDB",
+    "C:\\Users\\batat\\OneDrive\\Documentos\\facul\\ProjetoFabiano\\src\\Banco\\ESTOQUE.FDB",
   user: "SYSDBA",
   password: "masterkey",
   lowercase_keys: true,

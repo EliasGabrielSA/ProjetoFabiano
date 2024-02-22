@@ -1,9 +1,7 @@
 class Produto{
     _id;
     _descricao;
-    _valor;
-    _imagem;
-
+    _dt_validade;
     get id() {
         return this._id;
     }

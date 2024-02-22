@@ -70,9 +70,9 @@ app.delete("/produtos/:id", (req, res) => {
 // POST route to create or update a product
 app.post("/produtos", (req, res) => {
     console.log("banco de dados 1");
-    let sql = "INSERT INTO PRODUTO(DESCRICAO,VALOR,DT_VALIDADE) VALUES(?,?,?)";
+    let sql = "INSERT INTO PRODUTO(DESCRICAO,DT_VALIDADE) VALUES(?,?)";
     if (!req.body.id) {
-        executeQuery(sql, [req.body.descricao, req.body.valor, req.body.dt_validade], function (err, result) {
+        executeQuery(sql, [req.body.descricao, req.body.dt_validade], function (err, result) {
             if (err) {
                 console.log(err);
                 return res.status(500).json(err);
@@ -81,8 +81,8 @@ app.post("/produtos", (req, res) => {
             }
         });
     } else {
-        sql = "UPDATE PRODUTO SET DESCRICAO = ?, VALOR = ?, IMAGEM = ? WHERE ID = ?";
-        executeQuery(sql, [req.body.descricao, req.body.valor, req.body.imagem, req.body.id], function (err, result) {
+        sql = "UPDATE PRODUTO SET DESCRICAO = ?, IMAGEM = ? WHERE ID = ?";
+        executeQuery(sql, [req.body.descricao, req.body.imagem, req.body.id], function (err, result) {
             if (err) {
                 console.log(err);
                 return res.status(500).json(err);
