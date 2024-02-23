@@ -78,7 +78,7 @@ function associaEventos(){
                 let prod = prods[0];
                 let frmProd = document.querySelector("#frmProd");
                 frmProd.querySelector("#inpDescricao").value = prod.descricao;
-                frmProd.querySelector("#inpDt_vencimento").value = prod.dt_vencimento;
+                frmProd.querySelector("#inpDt_validade").value = prod.dt_vencimento;
 
                 frmProd.dataset.id = prod.id;
 

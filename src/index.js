@@ -81,16 +81,16 @@ app.post("/produtos", (req, res) => {
             }
         });
     } else {
-        sql = "UPDATE PRODUTO SET DESCRICAO = ?, IMAGEM = ? WHERE ID = ?";
-        executeQuery(sql, [req.body.descricao, req.body.imagem, req.body.id], function (err, result) {
-            if (err) {
-                console.log(err);
-                return res.status(500).json(err);
-            } else {
-                return res.status(201).send("ok");
-            }
-        });
-    }
+    sql = "UPDATE PRODUTO SET DESCRICAO = ?, DT_VALIDADE = ? WHERE ID = ?";
+    executeQuery(sql, [req.body.descricao, req.body.dt_validade, req.body.id], function (err, result) {
+        if (err) {
+            console.log(err);
+            return res.status(500).json(err);
+        } else {
+            return res.status(201).send("ok");
+        }
+    });
+}
 });
 
 // Starting the server
